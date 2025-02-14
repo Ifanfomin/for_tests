@@ -1,0 +1,22 @@
+name: Cpp Style Check
+
+on: [push]
+
+jobs:
+  style-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Getting Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.4.0
+        with:
+          python-version: 3.x
+
+      - name: Install CppLint
+        run: pip install cpplint
+
+      - name: Run CppLint
+        run: cpplint --extensions=h,hpp,cpp --recursive --linelength=120 --filter="-build/include_what_you_use, -build/include_subdir,-legal/copyright" --output=vs7 .
