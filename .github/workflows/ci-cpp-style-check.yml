@@ -3,7 +3,7 @@ name: Cpp Style Check
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   style-check:
