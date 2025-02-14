@@ -13,11 +13,3 @@ enable_testing()
 include(GoogleTest)
 
 add_subdirectory(test_class)
-
-#set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-#add_executable(for_tests
-#        main.cpp
-#        my_class.cpp
-#)
-
