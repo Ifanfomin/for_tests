@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5.4.0
         with:
-          python-version: 3.12
+          python-version: 3.x
 
       - name: Install CppLint
         run: pip install cpplint
